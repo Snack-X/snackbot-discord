@@ -1,0 +1,14 @@
+{
+  "name": "snackbot-discord",
+  "version": "1.0.0",
+  "description": "Snackbot on Discord",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Snack <korsnack@korsnack.kr>",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.5.3"
+  }
+}
