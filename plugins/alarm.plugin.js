@@ -136,20 +136,24 @@ async function remove(message) {
     await message.reply({
       embed: {
         title: '알람 취소',
-        descriptiom: '해당 번호의 알람을 찾을 수 없습니다.',
+        description: '해당 번호의 알람을 찾을 수 없습니다.',
         color: ut.COLOR_RED,
       },
     });
+
+    return;
   }
 
   if (author.id !== alarm.author.id) {
     await message.reply({
       embed: {
         title: '알람 취소',
-        descriptiom: '본인의 알람만 취소할 수 있습니다.',
+        description: '본인의 알람만 취소할 수 있습니다.',
         color: ut.COLOR_RED,
       },
     });
+
+    return;
   }
 
   alarm.cancelled = true;
