@@ -1,0 +1,22 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = "build" ]; then
+  docker build -t snackbot .
+
+  exit
+fi
+
+if [ "$1" = "start" ]; then
+  docker run -d --name snackbot --restart always snackbot
+
+  exit
+fi
+
+if [ "$1" = "stop" ]; then
+  docker stop snackbot
+
+  exit
+fi
+
+exec "$@"
